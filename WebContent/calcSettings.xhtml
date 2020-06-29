@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Kalkulator JSF - Ustawienia</title>
+<!-- Arkusz styli css Bootstrap 4.5.0 -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<h:body style="text-align:center">
+<h:form>
+
+	<h4>Wybierz kolor tla kalkulatora:</h4>
+	<br/>
+	<h:selectOneMenu value="#{calculator.pageBackgroundColor}">
+  		<f:selectItem itemValue="green" itemLabel="Zielony &nbsp; &nbsp;"/>
+   		<f:selectItem itemValue="gold" itemLabel="Zloty &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="silver" itemLabel="Srebrny &nbsp; &nbsp;" />  
+   		<f:selectItem itemValue="red" itemLabel="Czerwony &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="blue" itemLabel="Niebieski &nbsp; &nbsp;" />   			
+	</h:selectOneMenu>
+	<br/><br/>
+		<h4>Wybierz kolor klawiszy numerycznych kalkulatora:</h4>
+	<br/>
+	<h:selectOneMenu value="#{calculator.btnColor}">
+  		<f:selectItem itemValue="green" itemLabel="Zielony &nbsp; &nbsp;"/>
+   		<f:selectItem itemValue="gold" itemLabel="Zloty &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="silver" itemLabel="Srebrny &nbsp; &nbsp;" />  
+   		<f:selectItem itemValue="red" itemLabel="Czerwony &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="blue" itemLabel="Niebieski &nbsp; &nbsp;" />   			
+	</h:selectOneMenu>
+	<br/><br/>
+		<h4>Wybierz kolor tla wyniku:</h4>
+	<br/>
+	<h:selectOneMenu value="#{calculator.resultColor}">
+  		<f:selectItem itemValue="green" itemLabel="Zielony &nbsp; &nbsp;"/>
+   		<f:selectItem itemValue="gold" itemLabel="Zloty &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="silver" itemLabel="Srebrny &nbsp; &nbsp;" />	 
+   		<f:selectItem itemValue="red" itemLabel="Czerwony &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="blue" itemLabel="Niebieski &nbsp; &nbsp;" />  			
+	</h:selectOneMenu>
+	<br/><br/>
+		<h4>Wybierz kolor liczby wyniku:</h4>
+	<br/>
+	<h:selectOneMenu value="#{calculator.resultFontColor}">
+   		<f:selectItem itemValue="gold" itemLabel="Zloty &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="silver" itemLabel="Srebrny &nbsp; &nbsp;" />	 
+   		<f:selectItem itemValue="red" itemLabel="Czerwony &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="blue" itemLabel="Niebieski &nbsp; &nbsp;" />  
+   		<f:selectItem itemValue="green" itemLabel="Zielony &nbsp; &nbsp;"/>			
+	</h:selectOneMenu>
+	<br/><br/>
+		<h4>Wybierz czcionke na przyciskach:</h4>
+	<br/>
+	<h:selectOneMenu value="#{calculator.font}">
+  		<f:selectItem itemValue="Arial"  itemLabel="Arial &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="Times New Roman" itemLabel="Times New Roman &nbsp; &nbsp;" />	 
+   		<f:selectItem itemValue="Lucida Console" itemLabel="Lucida Console &nbsp; &nbsp;" /> 
+   		<f:selectItem itemValue="Impact"  itemLabel="Impact &nbsp; &nbsp;" />
+   		<f:selectItem itemValue="Courier New" itemLabel="Courier New &nbsp; &nbsp;" />	 	   			
+	</h:selectOneMenu>
+	<br/><br/>	
+		<h:commandButton action="#{calculator.index()}" styleClass="btn btn-outline-primary btn-rounded " value="&nbsp; Ustaw &nbsp; "/>
+		&nbsp;
+		<h:commandLink onclick="history.go(-1);return false;" styleClass="btn btn-outline-danger btn-rounded " value="&nbsp; Powrot &nbsp; "/>
+	<br/>
+
+</h:form>
+</h:body>
+</html>

@@ -1,0 +1,32 @@
+html {
+	font-size: 22px;
+	width: 5%;
+}
+
+.btn {
+	width: 75px;
+	height: 75px;
+}
+
+.eqbtn {
+	width: 75px;
+	height: 150px;
+}
+
+.result {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	height: 40px;
+	background-color: #ccffff;
+	font-size: 36px;
+	text-align: right;
+	border: 0px;
+	padding-right: 5px; 
+	padding-left: 5px;
+	border-radius: 8px;
+	border: 1px solid black;
+}
+
+tr td {
+  padding: 0 !important;
+  margin: 0 !important;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Kalkulator JSF</title>
+<!-- Arkusz styli css Bootstrap 4.5.0 -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Style css korygujace Bootstrapa do zamierzonego wygladu -->
+<link href="./calculatorStyle.css" rel="stylesheet" type="text/css"/>
+<h:outputStylesheet name="css/calculatorStyle.css" />
+</h:head>
+
+<h:body style="background-color:#{calculator.pageBackgroundColor}">
+<div>
+
+<h:form>
+<table class="table" >
+<tr>
+	<td colspan="3" class="result" style="background-color:#{calculator.resultColor}; color:#{calculator.resultFontColor}">#{calculator.result} </td>
+	<td><h:commandButton action="#{calculator.cancel()}" value="C" styleClass="btn btn-danger" style="font-family:#{calculator.font}"/></td>
+	<td><h:commandButton action="#{calculator.calcSettings()}" value="S" styleClass="btn btn-secondary btn-rounded" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calculator.setArg0(7)}"  value="7" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.setArg0(8)}" value="8" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.setArg0(9)}" value="9" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.podziel()}" value="/" styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.sqrt()}" value="sqrt" styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calculator.setArg0(4)}" value="4" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.setArg0(5)}"  value="5" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.setArg0(6)}" value="6" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.pomnoz()}" value="*" styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.procent()}" value="%" styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calculator.setArg0(1)}" value="1" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.setArg0(2)}" value="2" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.setArg0(3)}" value="3" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.odejmij()}" value="-" styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+	<td rowspan="2"><h:commandButton action="#{calculator.equals()}" value="=" styleClass="eqbtn btn btn-primary" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calculator.setArg0(0)}" value="0" styleClass="btn btn-info btn-rounded" style="font-family:#{calculator.font}; background-color:#{calculator.btnColor}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.setArg0('.')}" value="," styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.zmienZnak()}" value="+/-" styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+	<td><h:commandButton action="#{calculator.dodaj()}" value="+" styleClass="btn btn-success" style="font-family:#{calculator.font}" disabled="#{calculator.hide}"/></td>
+</tr>
+</table>
+</h:form>
+</div>
+</h:body>
+
+</html>
